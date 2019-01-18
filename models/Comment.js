@@ -3,6 +3,10 @@ const Schema = mongoose.Schema
 
 const Comment = new Schema({
     text: String,
+    createdAt: {
+        type: Date,
+        default: Date.now()
+      }
 })
 
 

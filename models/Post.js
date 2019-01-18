@@ -14,7 +14,11 @@ const Post = new mongoose.Schema ({
     url: {
         link: mongoose.SchemaTypes.Url
     },
-    text: String
+    text: String,
+    createdAt: {
+        type: Date,
+        default: Date.now()
+      }
 })
 
 module.exports = mongoose.model({ Post })
