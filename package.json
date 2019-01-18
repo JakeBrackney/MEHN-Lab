@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JakeBrackney/MEHN-Lab/issues"
   },
-  "homepage": "https://github.com/JakeBrackney/MEHN-Lab#readme"
+  "homepage": "https://github.com/JakeBrackney/MEHN-Lab#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
