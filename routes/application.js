@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const homepage = require('./controllers/homepage.js')
+const homepage = require('../controllers/application')
 
 router.get('/', homepage.index)
 
