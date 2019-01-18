@@ -2,6 +2,7 @@ const express = require('express')
 const hbs = require("hbs");
 const bodyParser = require('body-parser')
 const app = express()
+// const mongoose = require('mongoose') - Zakk said not needed here
 
 // app.get('/', (request, response) => {
 // 	response.send("Hello World")
