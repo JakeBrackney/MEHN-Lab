@@ -1,4 +1,4 @@
-// const Post = require('../models/Post')
+const Post = require('../models/post')
 // const Comment = require('../models/Comment')
 
 // module.exports = {
@@ -8,3 +8,11 @@
 // 			.then
 // 	}
 // }
+
+
+module.exports = {
+    show: (req, res) => {
+Post.findOne({_id: req.params.id})
+    .populate("title")
+}
+}
