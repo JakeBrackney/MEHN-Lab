@@ -1,8 +1,8 @@
 <h1>Hacker News</h1>
-{{#if posts}}
+{{#if Posts}}
   <ul class="post">
     {{#each posts}}
-       {{this}}
+       {{> 'Post'}}
     {{/each}}
   </ul>
 {{/if}}

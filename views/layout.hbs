@@ -4,26 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>HackerNews</title>
-    {{!-- <link rel="stylesheet" href="/css/styles.css"> --}}
+        <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
   </head>
   <body>
-    {{!-- <header class="site-header">
+    <header class="site-header">
       <nav>
         <div class="nav-wrapper">
-          <a href="/" class="brand-logo left">Tweety</a>
+          <a href="/" class="brand-logo left">HackerNews</a>
           <ul class="right">
-          {{#if currentUser}}
-            <li><a href="/post/new">+post</a></li>
-            <li><a href="/user/{{currentUser.id}}">Profile</a></li>
-            <li><a href="/user/logout">Log Out</a></li>
-          {{else}}
-            <li><a href="/user/login">Log In</a></li>
-            <li><a href="/user/sign-up">Sign Up</a></li>
-          {{/if}}
           </ul>
         </div>
       </nav>
-    </header> --}}
+    </header>
     <main class="container">
       {{{ body }}}
     </main>

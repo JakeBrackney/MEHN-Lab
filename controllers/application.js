@@ -5,7 +5,7 @@ module.exports = {
     index: (req, res) => {
         Post.find({}).then(posts => {
             console.log(posts)
-            res.render( "index", { posts });
+            res.render( "app/index", { posts });
         })
     }
 };
