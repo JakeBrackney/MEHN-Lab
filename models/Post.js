@@ -22,3 +22,14 @@ const Post = new mongoose.Schema ({
 })
 
 module.exports = mongoose.model({ Post })
+
+
+db.post.insert(
+    {
+        "title": "For the Love of Pipes",
+        "url": {
+            "link": "https://blog.jessfraz.com/post/for-the-love-of-pipes/"
+        },
+        "text": "this is an article?",
+    }
+)
