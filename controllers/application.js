@@ -1,8 +1,11 @@
-
+// const {Post} = require("../models/Post")
+const Post = require("../models/Post")
 
 module.exports = {
     index: (req, res) => {
-        res.render( "index", { page: "homepage"});
+        Post.find({}).then(posts => {
+            console.log(posts)
+            res.render( "index", { posts });
+        })
     }
 };
-

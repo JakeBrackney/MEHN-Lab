@@ -1,9 +1,7 @@
-<h1>Hacker News</h1>
 {{#if posts}}
-  <ul class="post">
+  <ul class="posts">
     {{#each posts}}
-       {{this}}
+       {{> 'post'}}
     {{/each}}
   </ul>
 {{/if}}
-

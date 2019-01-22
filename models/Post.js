@@ -1,4 +1,4 @@
-const mongoose = require('../db/connection.js')
+const mongoose = require('../db/connection')
 require('mongoose-type-url')
 const Schema = mongoose.Schema
 
@@ -9,7 +9,11 @@ const Schema = mongoose.Schema
 //     }
 // })
 
-const Post = new mongoose.Schema ({
+const Post = new Schema ({
+    author: {
+        type: Schema.Types.ObjectId,
+        ref: "User"
+    },
     title: String,
     url: {
         link: mongoose.SchemaTypes.Url
@@ -21,15 +25,15 @@ const Post = new mongoose.Schema ({
       }
 })
 
-module.exports = mongoose.model({ Post })
+module.exports = mongoose.model("Post", Post)
 
 
-db.post.insert(
-    {
-        "title": "For the Love of Pipes",
-        "url": {
-            "link": "https://blog.jessfraz.com/post/for-the-love-of-pipes/"
-        },
-        "text": "this is an article?",
-    }
-)
+// db.post.insert(
+//     {
+//         "title": "For the Love of Pipes",
+//         "url": {
+//             "link": "https://blog.jessfraz.com/post/for-the-love-of-pipes/"
+//         },
+//         "text": "this is an article?",
+//     }
+// )
