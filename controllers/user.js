@@ -8,11 +8,11 @@ module.exports = {
                 options: { limit: 5, sort: { createdAt: -1}}  
             })
             .then(user => {
-                res.render("index", {user})
+                res.render("user/signup", { user })
             })
     },
     new: (req, res) => {
-        res.render("user/new")
+        res.render("user/signup")
     },
     create: (req, res) => {
         User.create({
