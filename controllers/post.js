@@ -25,3 +25,8 @@ module.exports = {
 
 // new display the form
 //create receive the data from form as post request
+
+//next step create view/post directory
+//create post/new.js and post/create.js
+
+//build out delete controller
