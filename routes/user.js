@@ -8,7 +8,7 @@ router.post("/", userController.create)
 router.get('/login', userController.login)
 router.get("/new", userController.new)
 router.get("/:id", userController.show)
-router.put("/:id", userController.update)
+// router.put("/:id", userController.update)
 
 
 

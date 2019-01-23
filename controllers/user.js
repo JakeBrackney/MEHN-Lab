@@ -25,7 +25,7 @@ module.exports = {
             })
     },
     new: (req, res) => {
-        res.render("user/signup")
+        res.render("user/signup", { user })
     },
     create: (req, res) => {
         User.create({
