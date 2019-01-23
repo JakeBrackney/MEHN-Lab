@@ -26,14 +26,17 @@ module.exports = {
       return login(req, res);
     },
     signUp: (req, res) => {
-      res.render("user/signup", { message: req.flash("signupMessage") });
+      res.render("user/sign-up", { message: req.flash("signupMessage") });
     },
     createSignUp: (req, res) => {
-      const signup = passport.authenticate("local-signup", {
-        successRedirect: "/",
-        failureRedirect: "user/signup",
-        failureFlash: true
-      });
+      //create new document in users collection from signup form
+
+
+      // const signup = passport.authenticate("local-signup", {
+      //   successRedirect: "/",
+      //   failureRedirect: "user/sign-up",
+      //   failureFlash: true
+      // });
   
       return signup(req, res);
     },
