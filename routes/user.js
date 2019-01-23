@@ -1,19 +1,31 @@
 const express = require("express")
-const router = express.Router
+const router = express.Router()
 const passport = require('passport')
 const userController = require("../controllers/user")
 
+
 router.post("/", userController.create)
+router.get('/login', userController.login)
 router.get("/new", userController.new)
 router.get("/:id", userController.show)
 router.put("/:id", userController.update)
 
-module.exports = router
+
 
 // GET /
 // router.get('/', (req, res) => {
 //     res.render('index')
 // })
+
+
+router.post('/signup', (req, res) => {
+    let signupStrategy = passport.authenticate('local-signup', {
+        successRedirect : '/',
+        failureRedirect : '/signup',
+        failureFlash : true
+    });
+    return signupStrategy(req, res)
+})
 
 // // GET /signup
 // router.get('user/signup', (req, res) => {
@@ -55,4 +67,4 @@ module.exports = router
 // router.get('/secret', (req, res) => {
 // })
 
-// module.exports = router
+module.exports = router

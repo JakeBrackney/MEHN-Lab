@@ -1,16 +1,6 @@
-const express = require('express')
+
 const User = require("../models/User")
 const passport = require("passport");
-var router = express.Router();
-
-router.post('/signup', (req, res) => {
-    let signupStrategy = passport.authenticate('local-signup', {
-        successRedirect : '/',
-        failureRedirect : '/signup',
-        failureFlash : true
-    });
-    return signupStrategy(req, res)
-})
 
 
 
@@ -21,6 +11,9 @@ module.exports = {
             res.render('user/signup', { user })
         })
     },
+    login: (req, res) => {
+        res.render("user/login", { message: req.flash("loginMessage") });
+      },
     show: (req, res) => {
         User.findById(req.params.id)
             .populate({
