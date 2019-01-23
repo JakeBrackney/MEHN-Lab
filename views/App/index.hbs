@@ -1,9 +1,24 @@
 <h1>Hacker News</h1>
-{{#if Posts}}
+{{#each posts}}
+<div class="card">
+  <div class="card-content">
+    <a class="card-title" href="{{posts.link}}"> {{ title }} title </a>
+
+  {{log this}}
+  </div>
+  <div class="card-action">
+    <span class="post__date">{{ createdAt }}</span>
+    <span class="post_comments"> Comments</span>
+  </div>
+</div>
+{{/each}}
+
+
+{{!-- {{#if Posts}}
   <ul class="post">
     {{#each posts}}
-       {{> 'Post'}}
+       {{> 'post'}}
     {{/each}}
   </ul>
 {{/if}}
-
+ --}}

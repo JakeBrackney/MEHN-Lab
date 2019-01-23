@@ -3,9 +3,10 @@ const Post = require("../models/Post")
 
 module.exports = {
     index: (req, res) => {
-        Post.find({}).then(posts => {
-            console.log(posts)
-            res.render( "app/index", { posts });
+        Post.find({})
+        .then(posts => {
+            // console.log(posts)
+            res.render( "app/index", { posts: posts } );
         })
     }
 };
