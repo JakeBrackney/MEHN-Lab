@@ -2,6 +2,10 @@ const express = require('express')
 const hbs = require("hbs");
 const bodyParser = require('body-parser')
 const app = express()
+const passport = require('passport')
+require('./config/passport')(passport)
+app.use(passport.initialize())
+app.use(passport.session())
 // const mongoose = require('mongoose') - Zakk said not needed here
 
 // app.get('/', (request, response) => {
