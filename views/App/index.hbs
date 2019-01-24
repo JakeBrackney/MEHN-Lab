@@ -13,7 +13,19 @@
 </div>
 {{/each}}
 
+<div class='controls'>
+  <form action="/user/login">
+      <input type="submit" value="Log In" />
+  </form>
 
+  <form action="/user/sign-up">
+      <input type="submit" value="Sign Up" />
+  </form>
+
+  <form action="/">
+      <input type="submit" value="New Post" />
+  </form>
+</div>
 {{!-- {{#if Posts}}
   <ul class="post">
     {{#each posts}}
