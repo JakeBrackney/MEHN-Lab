@@ -8,18 +8,18 @@ module.exports = {
 // },
     new: (req, res) => {
         res.render("post/new") //
-    }
-    // create: (req, res) => { // POST request, 
-    //     Post.create ({
-    //         title: req.body.post.text,
-    //         url: req.body.post.link
-    //     }).then(obj => {
-    //         req.user.post.push(obj)
-    //         req.user.save(err => {
-    //             res.redirect(`/post/${post._id}`)
-    //         })
-    //     })
-    // },
+    },
+    create: (req, res) => { // POST request, 
+        Post.create ({
+            title: req.body.post.text,
+            url: req.body.post.link
+        }).then(obj => {
+            req.user.post.push(obj)
+            req.user.save(err => {
+                res.redirect(`/post/${post._id}`)
+            })
+        })
+    },
     // delete: (req, res) => {}
 }
 
