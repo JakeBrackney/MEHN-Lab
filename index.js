@@ -9,7 +9,6 @@ const methodOverride = require("method-override");
 
 const app = express();
 
-app.use(flash());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
@@ -18,7 +17,8 @@ app.use(
     saveUninitialized: true,
     resave: false
   })
-);
+  );
+  app.use(flash());
 
 
 require("./config/passport")(passport);

@@ -11,13 +11,4 @@ router.get('/logout', userController.logout);
 router.get('/:id', userController.show);
 
 
-router.post('/signup', (req, res) => {
-    let signupStrategy = passport.authenticate('local-signup', {
-        successRedirect : '/',
-        failureRedirect : '/signup',
-        failureFlash : true
-    });
-    return signupStrategy(req, res)
-})
-
 module.exports = router
